@@ -1,0 +1,103 @@
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #000000 ;
+    color: #ffffff;
+    line-height: 1.5;
+    text-align: justify;
+}
+
+
+h1{
+    color: #E61C44;
+    text-align: center;
+    font-size: 3em;
+}
+h2{
+    color: #E6331C;
+    text-align: center;
+    font-size: 2rem;
+}
+
+section h2{
+    color: #ffffff;
+    text-align: center;
+    font-size: 2em;
+}
+
+.PersonajesP h2{
+    color: #ec460a;
+    text-align: center;
+    font-size: 2rem;
+}
+
+#sinopsis{
+    width: 80%;
+    margin: 0 auto;
+    border-color: #ffffff;
+    border-style: dotted;
+    padding: 20px;
+    color: azure;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+h3{
+    text-align: center;
+    font-weight: bold;
+    font-size: 2em;
+    color: #E64F5E;
+}
+
+h4{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;
+    font-size: 1em;
+    color: blueviolet;
+}
+
+article{
+    text-align: center;
+    margin-top: 30px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.Personajes{
+    width: 80%; 
+    max-width: 500px; 
+    height: auto; 
+    display: block;
+    margin: 0 auto; 
+}
+.final h2{
+    color: #2b1d97;
+}
+.opinion{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+span{
+    color: blueviolet;
+    font-weight: bold;
+}
+#autor{
+    color: rgb(237, 226, 19);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.highlight{
+    color: darkred;
+    font-weight: bold;
+    font-style: italic;
+}
+
+footer{
+    width: 100%;
+    margin: 0 auto;
+    background-color: rgb(114, 112, 112);
+    padding: 20px;
+    color: azure;
+}
+.footer{
+    text-align: center;
+    font-style: italic;
+    font-weight: bold;
+}

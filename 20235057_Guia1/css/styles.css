@@ -1,0 +1,94 @@
+/*Estilos de fuente y color usando Google Fonts */
+body{
+    font-family: 'Roboto',sans-serif;
+    background-color: #f9fafb; /*color de fondo mas suavecito*/
+    color: #2c3e50;/*color de texto principal mas oscuro*/
+    line-height: 1.6; /*Mejorando la legibilidad con mayor interlineado */
+}
+
+.main-title{
+    font-family: 'Montserrat', sans-serif; 
+    color: #2980b9; /* Azul vibrante para el titulo principal */
+    font-size: 3em; /* Tamano de fuente mas grande */
+    text-align: center; 
+    margin-top: 20px; /* Espacio superior para separar del borde */
+}
+
+.subtitle{
+    font-family: 'Montserrat', sans-serif ;
+    color: #3498db; /* color de subtitulo en azul claro */
+    font-size: 2em;
+    text-align: center;
+    margin-bottom: 10px; /*  espacio inferior para separar del siguiente contenido*/
+}
+
+.intro-text{
+    font-size: 1.2em; /* Texto introductorio ligeramente mas grande */
+    color: #34495e; /* color de texto mas oscuro*/
+    text-align: center;
+}
+
+.country-section{
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    margin-top: 30px; /* espacio superior para separacion entre secciones */
+}
+
+.country-image{
+    width: 80%; /*ajustando las imagenes para ser mas responsivas */
+    max-width: 500px; /*limite de tamano maximo para mantener la uniformidad */
+    height: auto; 
+    display: block;/* Haciendo que las imagenes se centren en el bloque*/
+    margin: 0 auto; /* Centrando las imagenes */
+}
+
+.country-section h3 {
+    color: #e74c3c; /* Rojo vibrante para los nombres de los paises*/
+    font-size: 1.8em; /* Tamano de fuente mas grande para los titlos de los paises  */
+    margin-bottom: 5px; /* espacio inferior para separar del texto */
+}
+
+.country-section p {
+    font-size: 1em;
+    color: #2c3e50;
+    width: 80%;
+    margin: 0 auto 20px auto; /* centrando los parrafos y añadiendo margen inferior*/
+    text-align: justify; /* justificar el texto para un aspecto mas limpio*/
+}
+
+a {
+    color: #8e44ad; /* color morado para los enlaces */
+    text-decoration: none;
+    font-weight: 700; /* enlaces mas gruesos para mejorar la visibilidad */
+}
+
+a:hover{
+    color: #9b59b6; /* color mas claro al pasar el mouse*/
+    text-decoration: underline; /*  subrayar enlaces al pasar el mouse*/
+}
+
+.country-table{
+    width: 90%;
+    margin: 20px auto; /* centrando la tabla y añadiendp margen superior e inferior */
+    border-collapse: collapse;
+}
+
+.country-table th, .count td{
+    border: 1px solid #ddd; /* Bordes suaves y grises*/
+    padding: 10px; /* Aumentar espacio entre el contenido de la celda */
+    text-align: center;
+}
+
+.country-table th{
+    background-color: #3498db; /* fondo azul claro para encabezados */
+    color: white; /* texto blanco para contraste*/
+    font-size: bold;
+}
+
+.footer-text{
+    font-size: 1.1em;
+    text-align: center;
+    margin-top: 20px;
+    color: #7f8c8d; /* gris suave para el texto del pie de pagina*/
+    font-family: 'Montserrat', sans-serif;
+}
