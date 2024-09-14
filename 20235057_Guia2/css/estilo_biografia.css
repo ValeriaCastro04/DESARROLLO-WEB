@@ -1,3 +1,80 @@
-*{
-    background-color: rgb(245, 196, 245);
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif, Arial;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background-color: #fff;
+    z-index: 1000;
+    box-shadow: 0 4px 2px -2px gray;
+    
+}
+
+.titulo{
+  text-align: center;
+  padding:10px;
+  font-size: 24px;
+  font-family: serif
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+    text-align:center;
+}
+
+.menu ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.menu ul li {
+    padding: 10px 20px;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.menu ul li a:hover {
+    color: #007BFF;
+}
+
+.content {
+    padding: 20px;
+}
+
+section {
+    height: 500px;
+    padding: 50px;
+}
+
+#historia {
+    background-color: #f2f2f2;
+}
+
+#educacion {
+    background-color: #eaeaea;
+}
+
+#logros {
+    background-color: #f2f2f2;
+}
+
+#metas {
+    background-color: #eaeaea;
 }
