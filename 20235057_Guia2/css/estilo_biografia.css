@@ -109,7 +109,7 @@ section {
 }
 
 #historia {
-    background-color: #f2f2f2;
+    background-color: #dbdada;
 }
 
 #educacion {
@@ -117,7 +117,7 @@ section {
 }
 
 #logros {
-    background-color: #f2f2f2;
+    background-color: #dbdada;
 }
 
 #metas {
@@ -156,4 +156,62 @@ section {
 .educacion-text{
     padding-left: 20px;
     line-height: 1.6;
+}
+
+a{
+    color: #056475;
+    font-weight: bold;
+}
+
+a:hover{
+    background-color:cadetblue;
+}
+
+.logros-content{
+    display: flexbox;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+.logros-text{
+    flex: 1;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.logros-imagen{
+    max-width: 300px;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+footer{
+    background-color:darkcyan ;
+    width: 100%;
+    position: relative;
+    color: #f2f2f2;
+    text-align: center;
+    padding-bottom: 1.5em;
+}
+
+footer::before{
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 100%;
+    width: 0;
+    height: 0;
+
+}
+h2{
+    font-family: "Roboto Mono", monospace;
+    font-size: 12px;
 }
