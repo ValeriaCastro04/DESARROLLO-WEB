@@ -21,6 +21,8 @@ footer{
     text-align: center;
 }
 
+/* La respuesta a la pregunta es h1: 40px, h2:24px, h3:20px*/
+
 div.wrapper{
     margin: 0 auto;
     width: 80%;
