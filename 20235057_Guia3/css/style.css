@@ -39,15 +39,23 @@ h2{
 section{
     margin: 0 auto;
     width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 section article{
     font-size: 0.9rem;
     height: 340px;
-    width: 33.33%;
+    width: 32%;
+    margin-bottom: 20px;
+    background-color: #f9f9f9;
+    box-sizing: border-box;
 }
 
 section article img{
     height: 180px;
     max-width: 80%;
+    display: block;
+    margin: 0 auto;
 }
