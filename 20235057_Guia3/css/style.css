@@ -12,6 +12,7 @@ body{
 header{
     background: #16A085;
     height: 130px;
+    overflow: hidden;
 }
 
 footer{
@@ -53,11 +54,13 @@ section article{
     border: 2px dashed #16A085;
     padding: 1%;
     box-sizing: border-box;
+    overflow: hidden;
 }
 
 section article img{
     height: 180px;
     max-width: 80%;
+    margin: 5px auto;
     display: block;
-    margin: 0 auto;
+
 }
