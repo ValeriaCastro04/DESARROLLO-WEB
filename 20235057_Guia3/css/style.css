@@ -35,3 +35,19 @@ h1{
 h2{
     font-size: 2rem;
 }
+
+section{
+    margin: 0 auto;
+    width: 90%;
+}
+
+section article{
+    font-size: 0.9rem;
+    height: 340px;
+    width: 33.33%;
+}
+
+section article img{
+    height: 180px;
+    max-width: 80%;
+}
