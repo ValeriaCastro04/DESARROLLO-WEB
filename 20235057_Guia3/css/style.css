@@ -42,13 +42,16 @@ section{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    overflow: hidden;
 }
 
 section article{
     font-size: 0.9rem;
     height: 340px;
-    width: 33.33%;
-    margin-bottom: 20px;
+    width: 32.33%;
+    margin: 0.5%;
+    border: 2px dashed #16A085;
+    padding: 1%;
     box-sizing: border-box;
 }
 
