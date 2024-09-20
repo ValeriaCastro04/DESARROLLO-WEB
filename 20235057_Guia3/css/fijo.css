@@ -46,3 +46,8 @@ h1{
     line-height: 180%;
     text-align: justify;
 }
+
+div#imgDesc img{
+    float: left;
+
+}
