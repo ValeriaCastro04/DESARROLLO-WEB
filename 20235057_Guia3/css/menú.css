@@ -1,0 +1,26 @@
+/* MENU */
+
+nav{
+    width: 960px;
+    font-size: 1.4em;
+}
+
+nav ul{
+    list-style: none;
+    margin: 0px 0px 65px 0px;
+}
+
+nav ul li{
+    float: left;
+    margin: 0px;
+    padding: 10px 0px 0px 0px;
+    border-top: solid 2px white;
+}
+
+nav ul li a{
+    text-decoration: none;
+    padding: 0.3em 0.5em;
+    margin: 0em 0.5em;
+    display: block;
+    color: white;
+}
