@@ -47,7 +47,75 @@ h1{
     text-align: justify;
 }
 
-div#imgDesc img{
+#imgDesc img{
     float: left;
 
+}
+
+#imgDesc{
+    overflow: hidden;
+}
+
+/* CONTENIDO PRINCIPAL DE LAS PAGINAS*/
+
+#contenido{
+    width: 960px;
+    margin: 0px auto;
+    clear: left;
+}
+
+/* pie de la pagina*/
+footer{
+    text-align: center;
+    margin: 0;
+    font-size: .9em;
+    line-height: 2;
+    clear: both;
+    background-color: #464d52;
+    color: white;
+    width: 100%;
+}
+
+/*Contenido de la pagina index*/
+.plan{
+    width: 258px;
+    padding: 20px;
+    background-color: white;
+    margin: 30px 15px;
+    border: solid 1px black;
+    border-radius: 10px;
+    float: left;
+    text-align: justify;
+}
+
+#contenido div:nth-child(3n+1){
+    margin-left: 0px;
+}
+
+#contenido div:nth-child(3n){
+    margin-right: 0px;
+}
+
+.boton{
+    background-color: #464d52;
+    padding: 7px;
+    border-radius: 5px;
+    color: white;
+    margin-top: 10px;
+    font-size: .9em;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    transition: backgroud 1s;
+}
+
+.boton:hover{
+    background: #5077c7;
+}
+
+.boton a{
+    text-decoration: none;
+    color: white;
+    width: 100%;
+    display: block;
 }
