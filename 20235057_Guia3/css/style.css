@@ -76,9 +76,13 @@ footer div{
 
 section article:nth-child(2){
     background-color: rgba(70,130,180,0.9);
-    position: absolute;
+    position: static;
     left: 100px;
     top: 50px;
+    z-index: 1;
+
 }
 
 /*Las otras cajas se mantuvieron igual porque solo el hijo 2 cambio su posicion a una relativa  */
+/*Visibility:none lo oculta en su lugar, aparece el espacio vacio pero las demas cajas no reemplazan ese espacio, en cambio, con display none sí pasa eso
+y se mueven las cajas para cubrir ese espacio vacio  */
