@@ -119,3 +119,24 @@ footer{
     width: 100%;
     display: block;
 }
+
+/* Contenido de la pagina planes*/
+
+.planes{
+    width: 900px;
+    background: white;
+    padding: 10px 30px;
+}
+
+.planes h1{
+    text-align: left;
+    font-size: 1.5em;
+}
+
+.planes .precio{
+    font-size: 1.1em;
+    margin: 20px 0px 5px;
+    padding-bottom: 15px;
+    border-bottom: solid 2px grey;
+    font-weight: bold;
+}
