@@ -54,6 +54,10 @@ h1{
     width: 21%;
 }
 
+#imgDesc img{
+    float: left;
+}
+
 #superior #encabezado #imgDesc img{
     float: left;
     width: 62.5%;
