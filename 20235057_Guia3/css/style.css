@@ -13,12 +13,14 @@ header{
     background: #16A085;
     height: 130px;
     overflow: hidden;
+    z-index: 1;
 }
 
 footer{
     margin-top: 20px;
     background: #16A085;
     height: 50px;
+    z-index: 1;
 }
 
 header div, footer div{
