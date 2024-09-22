@@ -1,5 +1,49 @@
 body{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    text-align: center;
-    
+    font-family: Arial, sans-serif;
+}
+
+h1{
+    margin: 20px;
+}
+
+div{
+    position: absolute;
+}
+
+#as_de_diamantes img{
+    background-image: url(../img/diamonds_ace.gif);
+    top: 80px;
+    left: 80px;
+    z-index: 5;
+}
+
+#rey_de_diamantes img{
+    top: 60px;
+    left: 60px;
+    z-index: 4;
+}
+
+#reina_de_corazones img{
+    top: 40px;
+    left: 40px;
+    z-index: 3;
+}
+
+#sota_de_diamantes img{
+    top: 20px;
+    left: 20px;
+    z-index: 2;
+}
+
+#diez_de_diamantes img{
+    background-image: url(../img/diamonds_10.gif);
+    top: 0px;
+    left: 0px;
+    z-index: 1;
+}
+
+img{
+    border: 2px solid black;
+    border-radius: 5px;
+
 }
