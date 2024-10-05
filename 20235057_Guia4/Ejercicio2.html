@@ -11,6 +11,20 @@
         <img src="img/foto-perfil.jpg" alt="Foto perfil"><h1>Perfil</h1>
         <fieldset id="datos">
             <legend>Datos</legend>
+            <TABLE>
+                <TR><TD>Fechas de nacimiento:</TD><TD><INPUT type="date" name="apellido"></INPUT></TD></TR>
+                <TR><TD>Ingrese su foto:</TD><TD><INPUT type="file" name="foto"></INPUT></TD></TR>
+                <TR><TD>Nacionalidad:</TD>
+                    <TD>
+                        <INPUT type="text" list="nacionalidad"></INPUT>
+                         <DATALIST id="nacionalidad">
+                            <OPTION value="Salvadoreño"></OPTION>
+
+                         </DATALIST>
+
+                    </TD>
+                    </TR>
+            </TABLE>
             <input type="text" name="nombre" placeholder="Nombre"><br>
             <input type="email" name="correo" placeholder="Correo Electrónico"><br>
             <input type="tel" name="telefono" placeholder="Número de Teléfono"><br>
