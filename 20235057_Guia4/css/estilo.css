@@ -25,10 +25,9 @@
 
 .terminos{
     display: inline;
-    color: #fff;
 }
 
-.terminos p{
+p.terminos{
     font-size: 11px;
     color: #fff;
 }
@@ -50,7 +49,7 @@
     font-size: 18px;
 }
 
-#boton{
+.boton{
     background-color: rgba(164, 179, 87, 1);
     border-radius: 15px;
     width: 150px;
@@ -108,14 +107,17 @@ form{
     font-family: 'Century Gothic', sans-serif;
     background-color: rgba(76, 76, 76, 1);
     box-shadow: 10px 10px 112px 0px rgba(0, 0, 0, 0.75);
+    /* Prefijos para sombra en Mozilla y Chrome */
+    -webkit-box-shadow: 10px 10px 112px 0px rgba(0, 0, 0, 0.75); /* Chrome y Safari */
+    -moz-box-shadow: 10px 10px 112px 0px rgba(0, 0, 0, 0.75); /* Firefox */
 }
 
-form:required{
+:required{
     border-radius: 15px;
     box-shadow: 0px 0px 5px #808080;
 }
 
-form:invalid{
+:invalid{
     border-radius: 15px;
     border-color: rgba(164, 179, 87, 1);
 }
