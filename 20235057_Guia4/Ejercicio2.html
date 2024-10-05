@@ -1,74 +1,56 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2 - Controles de Formulario</title>
     <link rel="stylesheet" type="text/css" href="css/estilo.css">
 </head>
 <body class="formdatos">
     <form action="Ejercicio3.html" method="post">
         <img src="img/foto-perfil.jpg" alt="Foto perfil"><h1>Perfil</h1>
-
         <fieldset id="datos">
             <legend>Datos</legend>
-            <table border="0">
-            <tr><td>fecha de nacimiento:</td><td><input type="date" name="apellido"></td></tr>
-            <tr><td>Ingrese su foto:</td><td><input type="file" name="foto"></td></tr>
-            <tr><td>Nacionalidad:</td>
-                <td>
-                <input type="text" list="nacionalidad">
-                <datalist id="nacionalidad">
-                <OPTION value="Salvadoreño">Salvadoreño(a)</OPTION>
-                <OPTION value="Hondureño">Hondureño(a)</OPTION>
-                <OPTION value="Guatemalteco">Guatemalteco(a)</OPTION>
-                <OPTION value="Costarricense">Costarricense(a)</OPTION>
-                <OPTION value="Nicaraguense">Nicarag&uuml;ense(a)</OPTION>
-                <OPTION value="Panameño">Panameño(a)</OPTION>
-                </datalist>
-                </td></tr>
-            <tr><td>Color favorito:</td><td><input type="color" name="color"></td></tr>
-            <tr><td>Sexo:</td>
-            <td><input type="radio" name="sexo" value="mas" checked>Masculino</td><br>
-            <td><input type="radio" name="sexo" value="fem">Femenino</td></tr>
-            <tr><td>Edad:</td><td><input type="number" name="edad" min="18" max="50"></td></tr>
-            <tr><td>Direcci&oacute;n:</td><td><textarea rows="5" cols="30"></textarea></td></tr>
-            </table>
+            <input type="text" name="nombre" placeholder="Nombre"><br>
+            <input type="email" name="correo" placeholder="Correo Electrónico"><br>
+            <input type="tel" name="telefono" placeholder="Número de Teléfono"><br>
         </fieldset>
-
+    
         <fieldset id="temas">
             <legend>Temas</legend>
-            Elija tema de interés:<br><br>
-            <input type="radio" name="tema" value="ciencia" checked>ciencia<br>
-            <input type="radio" name="tema" value="arte">arte<br>
-            <input type="radio" name="tema" value="literatura">literatura<br>
-            <input type="radio" name="tema" value="tecnologia">tecnología<br>
-            <input type="radio" name="tema" value="musica">música<br>
-            <input type="radio" name="tema" value="informatica">informática<br><br>
-            Libros y artículos de su interés:
+            <label>Elija tema de interés:</label><br><br>
+            <input type="radio" name="tema" value="ciencia" checked> Ciencia<br>
+            <input type="radio" name="tema" value="arte"> Arte<br>
+            <input type="radio" name="tema" value="literatura"> Literatura<br>
+            <input type="radio" name="tema" value="tecnologia"> Tecnología<br>
+            <input type="radio" name="tema" value="musica"> Música<br>
+            <input type="radio" name="tema" value="informatica"> Informática<br><br>
+            <br>
+            <label>Libros y artículos de su interés:</label>
             <select id="Selarea" multiple>
-                <option value="Asp">Asp.net</option>
-                <option value="Vb">vb.net</option>
+                <option value="ASP">Asp.net</option>
+                <option value="vb">vb.net</option>
                 <option value="C#">c#.net</option>
                 <option value="Javascript">JavaScript</option>
                 <option value="PHP">PHP</option>
                 <option value="Java">Java</option>
                 <option value="Android">Android</option>
-                <option value="Cisco">Curricula Cisco</option>
+                <option value="Cisco">Currícula Cisco</option>
                 <option value="Redes">Redes comunicación informática</option>
                 <option value="SQL">SQL</option>
-                <option value="Oracel">Oracle</option>
+                <option value="Oracle">Oracle</option>
             </select>
         </fieldset>
-
+    
         <fieldset id="aficiones">
             <legend>Aficiones</legend>
-            Elija su pasatiempo:<br><br>
-            <input type="checkbox" name="aficion" value="deporte" checked>Deporte<br>
-            <input type="checkbox" name="aficion" value="musica">Música<br>
-            <input type="checkbox" name="aficion" value="lectura">Lectura<br>
-            <input type="checkbox" name="aficion" value="pesca">Pesca<br>
-            <input type="checkbox" name="aficion" value="pasear">Pasear<br>
-            <input type="checkbox" name="aficion" value="cine">Cine<br>
+            <label>Elija su pasatiempo:</label><br><br>
+            <input type="checkbox" name="aficion" value="deporte" checked> Deporte<br>
+            <input type="checkbox" name="aficion" value="musica"> Música<br>
+            <input type="checkbox" name="aficion" value="lectura"> Lectura<br>
+            <input type="checkbox" name="aficion" value="pesca"> Pesca<br>
+            <input type="checkbox" name="aficion" value="pasear"> Pasear<br>
+            <input type="checkbox" name="aficion" value="cine"> Cine
         </fieldset>
         <button class="boton" type="submit">Enviar Información</button>
     </form>

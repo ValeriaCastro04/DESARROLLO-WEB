@@ -1,21 +1,21 @@
-#login{
+#login {
     margin-top: 4%;
     margin-left: 32%;
     margin-right: 32%;
 }
 
-#login form{
+#login form {
     width: 400px;
     text-align: center;
 }
 
-#logindatos{
+#logindatos {
     border: none;
     margin-top: 5px;
     border-radius: 10px;
 }
 
-#login .img{
+#login .img {
     margin: 18px;
     position: absolute;
     width: 30px;
@@ -23,48 +23,48 @@
     border-radius: 0px;
 }
 
-.terminos{
+.terminos {
     display: inline;
 }
 
-p.terminos{
+p.terminos {
     font-size: 11px;
     color: #fff;
 }
 
-#login input{
+#login input {
     border-radius: 15px;
     width: 300px;
     height: 35px;
     margin: 10px;
 }
 
-#login input.terminos{
+#login input.terminos {
     width: 20px;
     height: 20px;
 }
 
-.control{
+.control {
     padding-left: 45px;
     font-size: 18px;
 }
 
-.boton{
-    background-color: rgba(164, 179, 87, 1);
+.boton {
+    background-color: rgba(164,179,87,1);
     border-radius: 15px;
     width: 150px;
     height: 40px;
     color: #fff;
-    font-family: 'Century Gothic', sans-serif;
+    font-family: 'Century Gothic';
     margin-top: 3px;
     margin-left: 185px;
 }
 
-.formdatos{
+.formdatos {
     color: #fff;
 }
 
-.formdatos form{
+.formdatos form {
     width: 1115px;
     height: 500px;
     border-radius: 15px;
@@ -72,8 +72,8 @@ p.terminos{
     margin: 20px auto;
 }
 
-.formdatos fieldset{
-    font-family: 'Century Gothic', sans-serif;
+.formdatos fieldset {
+    font-family: 'Century Gothic';
     padding: 12px;
     float: left;
     width: 25%;
@@ -83,7 +83,7 @@ p.terminos{
     margin-left: 13px;
 }
 
-.formdatos img{
+.formdatos img {
     float: left;
     width: 90px;
     height: 70px;
@@ -91,38 +91,35 @@ p.terminos{
     margin: 0px 22px;
 }
 
-.formdatos button{
+.formdatos button {
     margin-top: 3px;
     margin-left: 830px;
 }
 
-.formdatos p{
+.formdatos p {
     margin-top: 15%;
     padding-bottom: 15%;
     font-size: 48px;
     text-align: center;
 }
 
-form{
-    font-family: 'Century Gothic', sans-serif;
-    background-color: rgba(76, 76, 76, 1);
-    box-shadow: 10px 10px 112px 0px rgba(0, 0, 0, 0.75);
-    /* Prefijos para sombra en Mozilla y Chrome */
-    -webkit-box-shadow: 10px 10px 112px 0px rgba(0, 0, 0, 0.75); /* Chrome y Safari */
-    -moz-box-shadow: 10px 10px 112px 0px rgba(0, 0, 0, 0.75); /* Firefox */
+form {
+    font-family: 'Century Gothic';
+    background-color: rgba(76,76,76,1);
+    box-shadow: 10px 10px 112px 0px rgba(0,0,0,0.75);
 }
 
-:required{
+:required {
     border-radius: 15px;
     box-shadow: 0px 0px 5px #808080;
 }
 
-:invalid{
+:invalid {
     border-radius: 15px;
-    border-color: rgba(164, 179, 87, 1);
+    border-color: rgba(164,179,87,1);
 }
 
-h1{
+h1 {
     padding-top: 6px;
     color: #fff;
 }
