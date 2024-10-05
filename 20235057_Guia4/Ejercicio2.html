@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="css/estilo.css">
+</head>
+<body class="formdatos">
+    <form action="Ejercicio3.html" method="post">
+        <img src="img/foto-perfil.jpg" alt="Foto perfil"><h1>Perfil</h1>
+
+        <fieldset id="datos">
+            <legend>Datos</legend>
+            <TABLE border="0">
+                <tr><td>fecha de nacimiento:</td><td><input type="date" name="apellido"></td></tr>
+                <tr><td>Ingrese su foto:</td><td><input type="file" name="foto"></td></tr>
+                <tr><td>Nacionalidad:</td>
+                <td>
+                <input type="text" list="nacionalidad">
+                <DATALIST id="nacionalidad">
+                <OPTION value="Salvadoreño">Salvadoreño(a)</OPTION>
+                <OPTION value="Hondureño">Hondureño(a)</OPTION>
+                <OPTION value="Guatemalteco">Guatemalteco(a)</OPTION>
+                <OPTION value="Costarricense">Costarricense(a)</OPTION>
+                <OPTION value="Nicaraguense">Nicaraguense(a)</OPTION>
+                <OPTION value="Panameño">Panameño(a)</OPTION>
+                </DATALIST>
+                </td></tr>
+                <tr><td>Color favorito:</td><td><input type="color" name="color"></td></tr>
+                <tr><td>Sexo:</td>
+                <td><input type="radio" name="sexo" value="mas" checked>Masculino</td><br>
+                <td><input type="radio" name="sexo" value="fem">Femenino</td></tr>
+                <tr><td>Edad:</td><td><input type="number" name="edad" min="18" max="50"></td></tr>
+                <tr><td>Direcci&oacute;n:</td><td><textarea rows="5" cols="30"></textarea></td></tr>
+            </TABLE>
+        </fieldset>
+
+        <fieldset id="temas">
+        </fieldset>
+
+        <fieldset id="aficiones">
+        </fieldset>
+        <button class="boton" type="submit">Enviar Información</button>
+    </form>
+</body>
+</html>
