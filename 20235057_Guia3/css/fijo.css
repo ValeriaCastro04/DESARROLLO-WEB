@@ -106,7 +106,7 @@ footer{
     text-align: center;
     vertical-align: middle;
     cursor: pointer;
-    transition: backgroud 1s;
+    transition: background 1s;
 }
 
 .boton:hover{
