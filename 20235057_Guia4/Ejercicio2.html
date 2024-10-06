@@ -11,23 +11,28 @@
         <img src="img/foto-perfil.jpg" alt="Foto perfil"><h1>Perfil</h1>
         <fieldset id="datos">
             <legend>Datos</legend>
-            <TABLE>
+            <TABLE border="0">
                 <TR><TD>Fechas de nacimiento:</TD><TD><INPUT type="date" name="apellido"></INPUT></TD></TR>
                 <TR><TD>Ingrese su foto:</TD><TD><INPUT type="file" name="foto"></INPUT></TD></TR>
                 <TR><TD>Nacionalidad:</TD>
                     <TD>
                         <INPUT type="text" list="nacionalidad"></INPUT>
                          <DATALIST id="nacionalidad">
-                            <OPTION value="Salvadoreño"></OPTION>
-
+                            <OPTION value="Salvadoreño">Salvadoreño(a)</OPTION>
+                            <OPTION value="Hondureño">Hondureño(a)</OPTION>
+                            <OPTION value="Guatemalteco">Guatemalteco(a)</OPTION>
+                            <OPTION value="Costarricense">Costarricense</OPTION>
+                            <OPTION value="Nicaraguense">Nicarag&uuml;ense</OPTION>
+                            <OPTION value="Panameño">Panameño(a)</OPTION>
                          </DATALIST>
-
-                    </TD>
-                    </TR>
+                    </TD></TR>
+                <TR><TD>Color favorito:</TD><TD><INPUT type="color" name="color"></INPUT></TD></TR>
+                <TR><TD>Sexo:</TD></TR>
+                <TD><INPUT type="radio" name="sexo" value="mas" checked>Masculino</INPUT><br>
+                <INPUT type="radio" name="sexo" value="fem">Femenino</INPUT></TD>
+                <TR><TD>Edad:</TD><TD><INPUT type="number" name="edad" min="18" max="50"></INPUT></TD></TR>
+                <TR><TD>Direcci&oacute;n</TD><TD><TEXTAREA rows="5" cols="30"></TEXTAREA></TD></TR>
             </TABLE>
-            <input type="text" name="nombre" placeholder="Nombre"><br>
-            <input type="email" name="correo" placeholder="Correo Electrónico"><br>
-            <input type="tel" name="telefono" placeholder="Número de Teléfono"><br>
         </fieldset>
     
         <fieldset id="temas">
