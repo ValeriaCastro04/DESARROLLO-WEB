@@ -73,7 +73,6 @@ h1{
 #contenido{
     width: 80%;
     margin: 0px auto;
-    clear: left;
     min-width: 650px;
     max-width: 960px;
 }
