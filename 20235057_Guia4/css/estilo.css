@@ -50,7 +50,7 @@
     font-size: 18px;
 }
 
-#boton{
+.boton{
     background-color: rgba(164, 179, 87, 1);
     border-radius: 15px;
     width: 150px;
