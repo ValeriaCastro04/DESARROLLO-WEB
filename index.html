@@ -3,84 +3,138 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Index Guias</title>
-    <style>
-        body{
-            background-color: #cec0ea;
-            font-family: Verdana, Geneva, sans-serif;
-            line-height: 1.5;
-        }
-        header{
-            background-color: #62479a ;
-            font-family: Verdana, Geneva, Tahoma, sans-serif;
-            color: white;
-            font-weight: bold;
-            text-align: center;
-        }
-        h2{
-            font-weight: bold;
-            text-align: center;
-            font-size: 28px;
-        }
-        section{
-            font-size: 1em;
-            color: #13283e;
-            width: 80%;
-            margin: 0 auto 20px auto; 
-            text-align: center;
-        }
-        a{
-            color: #8e44ad; 
-            text-decoration: none;
-            font-weight: 700; 
-        }
-        a:hover{
-            color: #6a22c9; 
-            text-decoration: underline; 
-        }
-    </style>
+    <title>Portafolio estudiantil</title>
+    <link rel="stylesheet" href="css/estilo.css">
 </head>
 <body>
     <header>
-        <h1>Pagina de inicio - Guías - Valeria Castro - 20235057 </h1>
-    </header>
-    <section>
-        <h2>Ejercicios Guia 1:</h2>
-        <h3>Ejercicio 1 -  Usando estilos CSS embebidos en las etiquetas HTML.</h3>
-        <a href="20235057_Guia1/estilos_embebidos.html">Ejercicio 1 - Estilos Embebidos</a>
-        <h3>Ejercicio 2 - Incluyendo reglas css mediante la etiqueta style. </h3>
-        <a href="20235057_Guia1/ejemplo2.html">Ejercicio 2 - Instrucciones para llorar</a>
-        <h3>Ejercicio 3 - Usando reglas CSS definidas en archivos externos</h3>
-        <a href="20235057_Guia1/paises.html">Descubre Centroamérica</a>
-        <h3>Ejercicio 1 modificado con css</h3>
-        <a href="20235057_Guia1/estilos_embebidos2.html">Ejercicio 1 con CSS</a>
-        <h3>Ejercicio complemtentario - Pagina Web - Criminal Minds</h3>
-        <a href="20235057_Guia1/Criminal_Minds.html">Mi pagina web: Criminal Minds </a>   
-    </section>
-    <hr>
-    <br>
-    <section>
-        <h2>Ejercicios Guia 2:</h2>
-        <h3>Ejercicio 1 - Usando selectores CSS avanzados</h3>
-        <a href="20235057_Guia2\pelicula.html">El discurso del rey</a>
-        <h3>Ejercicio 2 -  Diseñando un tablero para damas con la pseudo-clase :nth-child()</h3>
-        <a href="20235057_Guia2/tablero.html">Tablero</a>
-        <h3>Ejercicio complementario: Biografia - Valeria Castro</h3>
-        <a href="20235057_Guia2/biografia.html"> Biografia Valeria Castro - Pato</a>
-    </section>
-    <hr>
-    <br>
-    <section>
-        <h2>Ejercicios Guia 3:</h2>
-        <h3>Ejercicio 1 -  Usando posicionamiento y visualización </h3>
-        <a href="20235057_Guia3/oscares.html">Oscares</a>
-        <h3>Ejercicio 2 - Diseñando un menú horizontal multinivel </h3>
-        <a href="20235057_Guia3/menu_horizontal.html">Menu Horizontal</a>
-        <h3>Ejercicio 3 -  Construyendo un diseño fijo y flexible</h3>
-        <a href="20235057_Guia3/index.html">Viajeros</a>
-        <h3>Ejercicios Complementarios</h3>
-        <a href="20235057_Guia3/analisis.html">Cartas</a>
-    </section>
+        <nav id="navbar">
+          <div class="container">
+            <h1 class="logo"><a href="index.html">Valeria Castro</a></h1>
+            <ul id="main-nav" class="txt-btn">
+              <li><a class="current" href="index.html">Portafolio</a></li>
+              <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+          </div>
+        </nav>
     
+        <div id="showcase-home">
+          <div class="showcase-banner">
+            <h1 class="subpage">Portafolio Estudiantil</h1>
+            <p class="large">Valeria Castro - 20235057</p>
+          </div>
+        </div>
+      </header>
+
+      <section id="portfolio">
+        <div class="container">
+          <div class="portfolio-nav">
+            <ul class="txt-btn">
+              <li><a href="#datos">Datos personales</a></li>
+              <li><a href="#datos-materia">Datos generales sobre la materia</a></li>
+              <li><a href="#guias">Guías de ejercicios</a></li>
+              <li><a href="#foda">FODA sobre el desempeño</a></li>
+              <li><a href="#retro">Retroalimentación</a></li>
+              <li><a href="#aprendizaje">Aprendizaje continuo</a></li>
+            </ul>
+          </div>
+          <div class="contenido">
+            <h1 id="datos">Datos Personales</h1>
+            <section class="subcontenido">
+              <h2>Nombre:</h2><p>Valeria Patricia Castro Mejia</p>
+              <h2>Carnet:</h2><p>20235057</p>
+              <p>Me llamo Valeria pero soy mejor conocida como "Pato". Tengo 20 años y actualmente estoy estudiando Ingeniería de Software y Negocios Digitales, y puedo decir que me encanta mi carrera.</p>
+            </section>
+          </div>
+
+          <div class="contenido">
+            <h1 id="datos-materia">Datos generales sobre la materia</h1>
+            <section class="subcontenido">
+              <h2>Descripción del curso:</h2>
+              <p>Este curso es el primero en la secuencia de desarrollo web y cubre los fundamentos básicos de los lenguajes HTML, CSS y JavaScript, que son los elementos esenciales de cualquier aplicación web.
+              <br>Algunos de los contenidos vistos en la primera parte de la materia son semántica de HTML, propiedades de CSS, maquetación de sitios web y el diseño responsivo.</p>
+            </section>
+          </div>
+
+          <div class="contenido">
+            <h1 id="guias">Guías de trabajo</h1>
+          </div>
+          <div class="seccion-guias">
+            <div class="portfolio-content">
+                <div class="box">
+                    <a href="guia1.html">
+                        <img src="img/guia1-img.png" alt="Imagen guia 1">
+                    </a>
+                </div>
+                <div class="box">
+                    <a href="guia2.html">
+                        <img src="img/guia2-img.png" alt="Imagen guia 2">
+                    </a>
+                </div>
+                <div class="box">
+                    <a href="guia3.html">
+                        <img src="img/guia3-img.png" alt="Imagen guia 3">
+                    </a>
+                </div>
+            </div>
+            <div class="portfolio-content">
+                <div class="box">
+                    <a href="guia4.html">
+                        <img src="img/guia4-img.png" alt="Imagen guia 4">
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+          </div>
+          <div class="contenido">
+            <h1 id="foda">FODA sobre el desempeño</h1>
+            <section class="subcontenido foda">
+                <div class="foda-container">
+                    <div class="foda-texto">
+                      <h2>Fortalezas:</h2>
+                      <p>En lo personal siento que he dominado el uso de html y css en conjunto como tal, de igual forma el tema de la maquetación es algo que ya puedo pensar con claridad y realizarlo sin problemas.</p>
+                      <h2>Oportunidades:</h2>
+                      <p>Aprender a crear páginas web me servirá en el ámbito profesional porque mi meta es ser una ingeniera full-stack por lo que todo lo visto en este curso me servirá, de igual manera, lo visto en el curso nos ha ayudado a mi grupo y a mi en la materia de Metodologías Ágiles.</p>
+                      <h2>Debilidades</h2>
+                      <p>Necesito seguir trabajando en la lógica detrás de css, más que todo para dominar el tema del float y el diseño responsivo.</p>
+                      <h2>Amenazas:</h2>
+                      <p>En mi caso la falta de confianza en mi misma al inicio sobre si lograría entender y dominar lo de la materia me hacía dudar mucho de lo que hacía durante las guías, lo que me generó dificultades técnicas y al final, personales al tener que desvelarme para arreglar las cosas.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+        
+
+          <div class="contenido">
+            <h1 id="retro">Retroalimentación del curso</h1>
+            <section class="subcontenido">
+              <h2>Lo que me ha gustado:</h2>
+              <p>Las actividades me han gustado bastante porque sin duda es asi como uno va aprendiendo.</p>
+              <h2>Lo que no me ha gustado:</h2>
+              <p>Al principio era el tema de ir demasiado rápido con los temas porque sí hay mucho que aprender, pero ya al final de esta primera parte siento que ya no sucedía.</p>
+              <h2>Retos asumidos:</h2>
+              <p>La complejidad con el tema del diseño responsivo, sin duda es un tema que me frustra mucho, incluso para este ejercicio de la guia, he pasado más de 5 horas tratando de que sea responsivo y se vea bonito. </p>
+              <h2>Sugerencias para mejorar:</h2>
+              <p>Dar indicaciones del proyecto de catédra unas 2 semanas antes para que nadie tenga excusa de que no se hizo algo por el tiempo, siento que dando el tiempo correcto de preparación se obtienen trabajos de mejor calidad.</p>
+            </section>
+          </div>
+
+          <div class="contenido final">
+            <h1 id="aprendizaje">Sección de aprendizaje continuo:</h1>
+            <section class="subcontenido">
+              <h2>Lista de recursos adicionales:</h2>
+              <ul>
+                <li><a href="https://paletadecolores.org/">Aplicacion de paleta de colores</a></li>
+                <li>Figma para bosquejo</li>
+                <li>CodePen para probar diferentes opciones en cuanto a diseño</li>
+              </ul>
+              <h2>Planes futuros:</h2>
+              <p>Planeo profundizar en toda la parte de front-end y back-end, para crear sitios web aun más lindos y útiles. Profundizar en css y javascript, php, etc.</p>
+            </section>
+          </div>  
 </body>
+<footer>
+  <p>Creado por: Valeria Patricia Castro Mejia - 20235057</p>
+</footer>
 </html>
