@@ -76,47 +76,14 @@ const addPaciente = function(){
     }
 };
 
-// Función para eliminar un paciente
-const eliminarPaciente = (index) => {
-    arrayPaciente.splice(index, 1);
-    imprimirPacientes();
-    mensaje.innerHTML = "Paciente eliminado";
-    toast.show();
-};
-
-// Función para editar un paciente
-const editarPaciente = (index) => {
-    const paciente = arrayPaciente[index];
-    inputNombre.value = paciente[0];
-    inputApellido.value = paciente[1];
-    inputFechaNacimiento.value = paciente[2];
-    paciente[3] === "Hombre" ? (inputRdMasculino.checked = true) : (inputRdFemenino.checked = true);
-    cmbPais.value = Array.from(cmbPais.options).find(opt => opt.text === paciente[4]).value;
-    inputDireccion.value = paciente[5];
-
-    // Al hacer clic en "Guardar", se actualiza el paciente
-    buttonAgregarPaciente.onclick = () => {
-        arrayPaciente[index] = [
-            inputNombre.value,
-            inputApellido.value,
-            inputFechaNacimiento.value,
-            inputRdMasculino.checked ? "Hombre" : "Mujer",
-            cmbPais.options[cmbPais.selectedIndex].text,
-            inputDireccion.value
-        ];
-        imprimirPacientes();
-        limpiarForm();
-        mensaje.innerHTML = "Paciente editado correctamente";
-        toast.show();
-    };
-};
-
 // Modificar `imprimirFilas` para agregar eventos a los botones de edición y eliminación
 function imprimirFilas() {
     let $fila = "";
-    arrayPaciente.forEach((element, index) => {
+    let contador = 1;
+
+    arrayPaciente.forEach((element) => {
         $fila += `<tr>
-                    <td scope="row" class="text-center fw-bold">${index + 1}</td>
+                    <td scope="row" class="text-center fw-bold">${contador}</td>
                     <td>${element[0]}</td>
                     <td>${element[1]}</td>
                     <td>${element[2]}</td>
@@ -132,6 +99,7 @@ function imprimirFilas() {
                         </button>
                     </td>
                 </tr>`;
+        contador++;
     });
     return $fila;
 }
