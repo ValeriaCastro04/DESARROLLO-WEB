@@ -76,13 +76,47 @@ const addPaciente = function(){
     }
 };
 
-function imprimirFilas(){
-    let $fila = "";
-    let contador = 1;
+// Función para eliminar un paciente
+const eliminarPaciente = (index) => {
+    arrayPaciente.splice(index, 1);
+    imprimirPacientes();
+    mensaje.innerHTML = "Paciente eliminado";
+    toast.show();
+};
 
-    arrayPaciente.forEach((element) =>{
-        $fila +=`<tr>
-                    <td scope="row" class="text-center fw-bold">${contador}</td>
+// Función para editar un paciente
+const editarPaciente = (index) => {
+    const paciente = arrayPaciente[index];
+    inputNombre.value = paciente[0];
+    inputApellido.value = paciente[1];
+    inputFechaNacimiento.value = paciente[2];
+    paciente[3] === "Hombre" ? (inputRdMasculino.checked = true) : (inputRdFemenino.checked = true);
+    cmbPais.value = Array.from(cmbPais.options).find(opt => opt.text === paciente[4]).value;
+    inputDireccion.value = paciente[5];
+
+    // Al hacer clic en "Guardar", se actualiza el paciente
+    buttonAgregarPaciente.onclick = () => {
+        arrayPaciente[index] = [
+            inputNombre.value,
+            inputApellido.value,
+            inputFechaNacimiento.value,
+            inputRdMasculino.checked ? "Hombre" : "Mujer",
+            cmbPais.options[cmbPais.selectedIndex].text,
+            inputDireccion.value
+        ];
+        imprimirPacientes();
+        limpiarForm();
+        mensaje.innerHTML = "Paciente editado correctamente";
+        toast.show();
+    };
+};
+
+// Modificar `imprimirFilas` para agregar eventos a los botones de edición y eliminación
+function imprimirFilas() {
+    let $fila = "";
+    arrayPaciente.forEach((element, index) => {
+        $fila += `<tr>
+                    <td scope="row" class="text-center fw-bold">${index + 1}</td>
                     <td>${element[0]}</td>
                     <td>${element[1]}</td>
                     <td>${element[2]}</td>
@@ -90,18 +124,18 @@ function imprimirFilas(){
                     <td>${element[4]}</td>
                     <td>${element[5]}</td>
                     <td>
-                        <button id="idBtnEditar${contador}" type="button" class="btn btn-primary" alt="Eliminar">
+                        <button type="button" class="btn btn-primary" onclick="editarPaciente(${index})">
                             <i class="bi bi-pencil-square"></i>
                         </button>
-                        <button id="idBtnEliminar${contador}" type="button" class="btn btn-danger" alt="Editar">
+                        <button type="button" class="btn btn-danger" onclick="eliminarPaciente(${index})">
                             <i class="bi bi-trash3-fill"></i>
                         </button>
                     </td>
                 </tr>`;
-        contador++;
     });
     return $fila;
 }
+
 
 const imprimirPacientes = () => {
     let $table = `<div class="table-responsive">
@@ -169,3 +203,57 @@ idModal.addEventListener("shown.bs.modal", () => {
 
 //ejecutar funcion al momento de cargar la pagina HTML
 limpiarForm();
+
+//EJERCICIO COMPLEMENTARIO
+// Función para validar el formulario del estudiante
+function validarFormularioEstudiante() {
+    const carnet = document.getElementById("idCarnet").value;
+    const nombre = document.getElementById("idNombre").value;
+    const dui = document.getElementById("idDUI").value;
+    const nit = document.getElementById("idNIT").value;
+    const fechaNacimiento = document.getElementById("idFechaNacimiento").value;
+    const correo = document.getElementById("idCorreo").value;
+    const edad = document.getElementById("idEdad").value;
+
+    // Expresiones regulares
+    const regexCarnet = /^[A-Za-z]{2}\d{3}$/;
+    const regexNombre = /^[A-Za-z\s]+$/;
+    const regexDUI = /^\d{8}-\d$/;
+    const regexNIT = /^\d{4}-\d{6}-\d{3}-\d$/;
+    const regexFecha = /^\d{4}-\d{2}-\d{2}$/;
+    const regexCorreo = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    const regexEdad = /^\d+$/;
+
+    // Validación
+    if (!regexCarnet.test(carnet)) {
+        alert("Carnet inválido. Formato: AB001");
+        return;
+    }
+    if (!regexNombre.test(nombre)) {
+        alert("Nombre inválido. Solo letras y espacios permitidos.");
+        return;
+    }
+    if (!regexDUI.test(dui)) {
+        alert("DUI inválido. Formato: 12345678-9");
+        return;
+    }
+    if (!regexNIT.test(nit)) {
+        alert("NIT inválido. Formato: 1234-567890-123-4");
+        return;
+    }
+    if (!regexFecha.test(fechaNacimiento)) {
+        alert("Fecha de nacimiento inválida. Formato: DD-MM-YYYY");
+        return;
+    }
+    if (!regexCorreo.test(correo)) {
+        alert("Correo electrónico inválido.");
+        return;
+    }
+    if (!regexEdad.test(edad)) {
+        alert("Edad inválida. Solo números permitidos.");
+        return;
+    }
+
+    // Si todas las validaciones pasan
+    alert("Formulario validado correctamente.");
+}

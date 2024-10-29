@@ -1,75 +1,67 @@
-//accedemos al contenedor donde se mostrara los estudiantes
+// Accedemos al contenedor donde se mostrará la lista de estudiantes
 const containerEstudiantes = document.querySelector("#idContainerEstudiantes");
 
-//accedemos a cada boton por medio de la API DOM
+// Accedemos al botón de cálculo de promedio
 const btnPromedio = document.querySelector("#idBtnPromedio");
 
-//agregamos el evento click a los botones, adicionalmente
-// se le asigna la funcion que se realizara la operacion
+// Agregamos el evento click al botón y asignamos la función a realizar
 btnPromedio.addEventListener("click", generarEstudiantes);
 
-function generarEstudiantes(){
-    let arrayEstudiante = new Array();
+function generarEstudiantes() {
+    let arrayEstudiante = [];
+    let totalEstudiantes = parseInt(document.querySelector("#inputNumeroEstudiantes").value);
 
-    let totalEstudiantes = document.querySelector(
-        "#inputNumeroEstudiantes"
-    ).value;
-    let contador =1;
+    if (isNaN(totalEstudiantes) || totalEstudiantes <= 0) {
+        alert("Por favor, ingrese un número válido de estudiantes.");
+        return;
+    }
 
-    //utilizaremos un while para recorrer el total de estudiantes
+    let contador = 1;
 
-    let estudiante,
-        calificacion,
-        convertir = 0;
-        while(contador <= totalEstudiantes){
-            estudiante = prompt(`Ingrese el nombre del estudiante ${contador}`);
+    // Utilizamos un while para pedir los datos de cada estudiante
+    while (contador <= totalEstudiantes) {
+        let estudiante = prompt(`Ingrese el nombre del estudiante ${contador}`);
+        let calificacion;
+        let convertir;
 
-            do{
-                calificacion = prompt(
-                    `Ingrese la calificacion del estudiante ${contador}`
-                );
+        // Validación de la calificación del estudiante
+        do {
+            calificacion = prompt(`Ingrese la calificación del estudiante ${contador}`);
+            convertir = parseFloat(calificacion);
+        } while (isNaN(convertir) || convertir < 0 || convertir > 10);
 
-                convertir = parseFloat(calificacion);
-            } while (isNaN(convertir) || convertir < 0 || convertir > 10);
+        arrayEstudiante.push([estudiante, convertir]);
+        contador++;
+    }
 
+    // Variables para almacenar el promedio y la calificación más alta
+    let calificacionAlta = 0;
+    let promedio = 0;
+    let posicion = 0;
 
-            arrayEstudiante.push(new Array(estudiante, parseFloat(calificacion)));
-            
-            /*
-            arrayEstudiante[contador -1] = new Array(
-                estudiante,
-                parseFloat(calificacion)
-            );*/
-            contador ++;
+    // Generar el listado de estudiantes
+    let listado = "<h3>Listado de estudiantes registrados</h3><ol>";
+
+    for (let i = 0; i < arrayEstudiante.length; i++) {
+        const nombre = arrayEstudiante[i][0];
+        const nota = arrayEstudiante[i][1];
+
+        listado += `<li><b>Nombre:</b> ${nombre} - <b>Calificación:</b> ${nota}</li>`;
+
+        // Determinar la calificación más alta
+        if (nota > calificacionAlta) {
+            calificacionAlta = nota;
+            posicion = i;
         }
 
-        //verificaremos cual es el promedio de las calificaciones
+        promedio += nota;
+    }
 
-        let calificacionAlta = 0,
-            promedio = 0,
-            posicion = 0;
+    listado += "</ol>"; 
+    promedio = (promedio / arrayEstudiante.length).toFixed(2);
+    listado += `<p><b>Promedio de calificaciones:</b> ${promedio}</p>`;
+    listado += `<p><b>Estudiante con mejor calificación:</b> ${arrayEstudiante[posicion][0]}</p>`;
 
-        let listado = "<h3> Listado de estudiantes registrados </h3>";
-        listado += "<ol>";
-        for (let indice of arrayEstudiante){
-            let nombre = indice[0];
-            let nota = indice[1];
-
-            listado += `<li><b> Nombre: </b> ${nombre} - <b> Calificacion: </b> ${nota} </li>`;
-
-            if (nota > calificacionAlta){
-                posicion = indice;
-            }
-
-            promedio += parseFloat(nota);
-        }
-
-        listado += "/<ol>";
-        promedio = parseFloat(promedio / arrayEstudiante.length).toFixed(2);
-        listado += `<p><b>Promedio de calificaciones: </b> ${promedio}`;
-        listado += `<br><b>Estudiante con mejor calificacion </b> ${posicion[0]}</p>`;
-
-        //imprimiendo resultado
-        containerEstudiantes.innerHTML = listado;
-
+    // Imprimir el resultado en el contenedor
+    containerEstudiantes.innerHTML = listado;
 }
