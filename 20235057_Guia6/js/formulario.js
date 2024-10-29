@@ -121,4 +121,51 @@ const imprimirPacientes = () => {
                 </div>
     `;
     document.getElementById("idTablaPacientes").innerHTML = $table;
-}
+};
+//contador global de los option correspondientes
+//al select (cmb) pais
+let contadorGlobalOption = cmbPais.children.length;
+const addPais = () => {
+    let paisNew = inputNombrePais.value;
+
+    if (paisNew != ""){
+        let option = document.createElement("option");
+        option.textContent = paisNew;
+        option.value = contadorGlobalOption +1;
+
+        cmbPais.appendChild(option);
+
+        mensaje.innerHTML = "Pais agregado correctamente";
+
+        toast.show();
+    } else{
+        mensaje.innerHTML = "Faltan campos por completar";
+
+        toast.show();
+    }
+};
+
+buttonLimpiarPaciente.onclick = () => {
+    limpiarForm();
+};
+
+buttonAgregarPaciente.onclick = () => {
+    addPaciente();
+};
+
+buttonMostrarPaciente.onclick = () => {
+    imprimirPacientes();
+};
+
+buttonAgregarPais.onclick = () => {
+    addPais();
+};
+
+//se agrega el focus en el campo nombre pais del modal
+idModal.addEventListener("shown.bs.modal", () => {
+    inputNombrePais.value = "";
+    inputNombrePais.focus();
+});
+
+//ejecutar funcion al momento de cargar la pagina HTML
+limpiarForm();
