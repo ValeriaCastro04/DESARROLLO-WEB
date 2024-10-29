@@ -203,3 +203,37 @@ idModal.addEventListener("shown.bs.modal", () => {
 
 //ejecutar funcion al momento de cargar la pagina HTML
 limpiarForm();
+
+if (!regexCarnet.test(carnet)) {
+    alert("Carnet inválido. Formato: AB001");
+    return;
+}
+if (!regexNombre.test(nombre)) {
+    alert("Nombre inválido. Solo letras y espacios permitidos.");
+    return;
+}
+if (!regexDUI.test(dui)) {
+    alert("DUI inválido. Formato: 12345678-9");
+    return;
+}
+if (!regexNIT.test(nit)) {
+    alert("NIT inválido. Formato: 1234-567890-123-4");
+    return;
+}
+if (!regexFecha.test(fechaNacimiento)) {
+    alert("Fecha de nacimiento inválida. Formato: DD-MM-YYYY");
+    return;
+}
+if (!regexCorreo.test(correo)) {
+    alert("Correo electrónico inválido.");
+    return;
+}
+if (!regexEdad.test(edad)) {
+    alert("Edad inválida. Solo números permitidos.");
+    return;
+}
+
+// Si todas las validaciones pasan
+alert("Formulario validado correctamente.");
+
+limpiarForm();

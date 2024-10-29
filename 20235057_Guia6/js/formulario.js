@@ -123,14 +123,6 @@ function imprimirFilas() {
                     <td>${element[3]}</td>
                     <td>${element[4]}</td>
                     <td>${element[5]}</td>
-                    <td>
-                        <button type="button" class="btn btn-primary" onclick="editarPaciente(${index})">
-                            <i class="bi bi-pencil-square"></i>
-                        </button>
-                        <button type="button" class="btn btn-danger" onclick="eliminarPaciente(${index})">
-                            <i class="bi bi-trash3-fill"></i>
-                        </button>
-                    </td>
                 </tr>`;
     });
     return $fila;
