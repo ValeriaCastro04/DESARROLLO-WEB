@@ -1,4 +1,4 @@
-// Inicializando referencia de botones con métodos actuales
+// inicializando referencia de botones con métodos actuales
 const buttonAgregarPagina = document.querySelector("#idAgregarPagina");
 const buttonMenu = document.querySelector("#idAgregarMenu");
 const buttonTitulo = document.querySelector("#idAgregarTitulo");
