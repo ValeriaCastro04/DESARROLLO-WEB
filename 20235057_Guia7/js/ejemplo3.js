@@ -67,6 +67,7 @@ const disminuirLetra = function () {
     }
 };
 
+//denicion de funcion principal para inicializar referencia y eventos
 const startDOM = () => {
     // Obteniendo la referencia del botón cambiar fondo
     const buttonFondo = document.getElementById("idFondo");
