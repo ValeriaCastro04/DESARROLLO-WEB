@@ -14,6 +14,7 @@ const tituloElemento = document.getElementById("idTituloElemento");
 const nombreElemento = document.getElementById("idNombreElemento");
 
 // CREANDO MODAL CON BOOTSTRAP
+
 const modal = new bootstrap.Modal(document.getElementById("idModal"), {});
 
 // FUNCIÓN PARA VALIDAR QUE NO EXISTA UN CONTROL CON EL MISMO ID
