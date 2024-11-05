@@ -1,4 +1,4 @@
-// Inicializando primer color de fondo en el input color
+// inicializando primer color de fondo en el input color
 const primerColorFondo = function (event) {
     document.body.style.backgroundColor = event.target.value;
 };
@@ -7,7 +7,7 @@ const cambiarColorFondo = function (color) {
     document.body.style.backgroundColor = color;
 };
 
-// Funciones para modificar el color de los títulos
+// funciones para modificar el color de los títulos
 const primerColorTitulos = function (event) {
     let colorSeleccionado = event.target.value;
     const titulos = document.querySelectorAll("h1");
@@ -23,7 +23,7 @@ const cambiarColorTitulos = function (colorSeleccionado) {
     }
 };
 
-// Funciones para modificar el color de los párrafos
+// funciones para modificar el color de los párrafos
 const primerColorParrafos = function (event) {
     let colorSeleccionado = event.target.value;
     const parrafos = document.querySelectorAll("p");
