@@ -18,7 +18,6 @@ buttonAgregarPagina.onclick = function () {
             "style",
             "border:solid 1px black; height:500px; overflow: scroll; overflow-x: hidden;"
         );
-
         pagina.appendChild(contenedor);
     } else {
         alert("Ya se agregó el contenedor de la página");
@@ -36,7 +35,6 @@ buttonMenu.onclick = function () {
 
         if (menuVerificar.length == 0) {
             // Clonando el menú principal de nuestra página
-            // Para luego crearlo en la nueva página
             const menu = document.querySelector("header").cloneNode(true);
             contenedor.appendChild(menu);
         } else {
@@ -79,10 +77,7 @@ buttonTitulo.onclick = function () {
 
 
 buttonParrafo.onclick = function () {
-    // Verificando que exista el contenedor de la página
     const contenedor = document.querySelector("#idDivPage");
-
-    // Verificando que exista el menú
     const menu = document.querySelectorAll("#idDivPage > header");
 
     if (contenedor) {
@@ -91,11 +86,9 @@ buttonParrafo.onclick = function () {
 
             if (texto != "" && texto != null) {
                 const parrafo = document.createElement("p");
-                // Agregando clases de Bootstrap
                 parrafo.setAttribute("class", "lead mb-4 py-4");
                 parrafo.innerHTML = texto;
 
-                // Creando párrafo como hijo del contenedor
                 contenedor.appendChild(parrafo);
             } else {
                 alert("No se ha registrado ningún párrafo, por favor ingrese información");
