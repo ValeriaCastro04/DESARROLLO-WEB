@@ -3,20 +3,9 @@ const primerColorFondo = function (event) {
     document.body.style.backgroundColor = event.target.value;
 };
 
-const cambiarColorFondo = function (color) {
-    document.body.style.backgroundColor = color;
-};
-
 // funciones para modificar el color de los títulos
 const primerColorTitulos = function (event) {
     let colorSeleccionado = event.target.value;
-    const titulos = document.querySelectorAll("h1");
-    for (let index = 0; index < titulos.length; index++) {
-        titulos[index].style.color = colorSeleccionado;
-    }
-};
-
-const cambiarColorTitulos = function (colorSeleccionado) {
     const titulos = document.querySelectorAll("h1");
     for (let index = 0; index < titulos.length; index++) {
         titulos[index].style.color = colorSeleccionado;
@@ -32,65 +21,49 @@ const primerColorParrafos = function (event) {
     }
 };
 
-const cambiarColorParrafos = function (colorSeleccionado) {
-    const parrafos = document.querySelectorAll("p");
-    for (let index = 0; index < parrafos.length; index++) {
-        parrafos[index].style.color = colorSeleccionado;
-    }
-};
+// Variable global para el tamaño de la letra
+let fontSize = 1;
 
-let contadorAumentar = 1;
 const aumentarLetra = function () {
-    contadorAumentar += 0.005;
-    document.body.style.fontSize = `${contadorAumentar}em`;
-    const parrafos = document.querySelectorAll("p");
-    for (let index = 0; index < parrafos.length; index++) {
-        parrafos[index].style.fontSize = `${contadorAumentar}em`;
-    }
-    const titulos = document.querySelectorAll("h1");
-    for (let index = 0; index < titulos.length; index++) {
-        titulos[index].style.fontSize = `${contadorAumentar}em`;
-    }
+    fontSize += 0.05; 
+    actualizarTamañoLetra();
 };
 
-let contadorDisminuir = 1;
 const disminuirLetra = function () {
-    contadorDisminuir -= 0.005;
-    document.body.style.fontSize = `${contadorDisminuir}em`;
+    fontSize = Math.max(0.5, fontSize - 0.05); 
+    actualizarTamañoLetra();
+};
+
+const actualizarTamañoLetra = function () {
+    document.body.style.fontSize = `${fontSize}em`;
     const parrafos = document.querySelectorAll("p");
     for (let index = 0; index < parrafos.length; index++) {
-        parrafos[index].style.fontSize = `${contadorDisminuir}em`;
+        parrafos[index].style.fontSize = `${fontSize}em`;
     }
     const titulos = document.querySelectorAll("h1");
     for (let index = 0; index < titulos.length; index++) {
-        titulos[index].style.fontSize = `${contadorDisminuir}em`;
+        titulos[index].style.fontSize = `${fontSize}em`;
     }
 };
 
-//denicion de funcion principal para inicializar referencia y eventos
+// Función principal para inicializar referencias y eventos
 const startDOM = () => {
-    // Obteniendo la referencia del botón cambiar fondo
+    // Obteniendo la referencia del input color para cambiar fondo
     const buttonFondo = document.getElementById("idFondo");
     buttonFondo.value = "#ffffff";
     buttonFondo.addEventListener("input", primerColorFondo, false);
-    buttonFondo.addEventListener("change", cambiarColorFondo, false);
-    buttonFondo.select();
 
-    // Obteniendo la referencia del botón cambiar color de títulos
+    // Obteniendo la referencia del input color para cambiar color de títulos
     const buttonTitulos = document.getElementById("idTitulos");
     buttonTitulos.value = "#000000";
     buttonTitulos.addEventListener("input", primerColorTitulos, false);
-    buttonTitulos.addEventListener("change", cambiarColorTitulos, false);
-    buttonTitulos.select();
 
-    // Obteniendo la referencia del botón cambiar color de párrafos
+    // Obteniendo la referencia del input color para cambiar color de párrafos
     const buttonParrafos = document.getElementById("idParrafos");
     buttonParrafos.value = "#000000";
     buttonParrafos.addEventListener("input", primerColorParrafos, false);
-    buttonParrafos.addEventListener("change", cambiarColorParrafos, false);
-    buttonParrafos.select();
 
-    // Obteniendo las referencias de los botones
+    // Obteniendo las referencias de los botones de tamaño de letra
     const buttonAumentar = document.getElementById("idBtnAumentar");
     const buttonDisminuir = document.getElementById("idBtnDisminuir");
 
